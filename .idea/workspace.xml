@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8e7c853-d4fa-4dfb-bdfd-3997ce7c76cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AOCbase/day1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AOCbase/day2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AOCbase/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AOCbase/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/AOCAssignmentBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nihiF2Yw1IvQwIdjY1a2ejMu05" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
@@ -99,15 +100,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,7 +126,8 @@
       <option name="presentableId" value="Default" />
       <updated>1611878947907</updated>
       <workItem from="1611878951550" duration="1183000" />
-      <workItem from="1611947017923" duration="2585000" />
+      <workItem from="1611947017923" duration="3001000" />
+      <workItem from="1612010587961" duration="2069000" />
     </task>
     <servers />
   </component>
@@ -144,5 +144,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
