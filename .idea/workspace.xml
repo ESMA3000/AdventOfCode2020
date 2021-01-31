@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8e7c853-d4fa-4dfb-bdfd-3997ce7c76cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Input/day3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Input/day4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AOCbase/day3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AOCbase/day4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AOCbase/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AOCbase/day2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AOCbase/day4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,19 +101,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -140,6 +121,9 @@
       <workItem from="1612031783695" duration="248000" />
       <workItem from="1612041385679" duration="2731000" />
       <workItem from="1612049263410" duration="6517000" />
+      <workItem from="1612056405542" duration="22000" />
+      <workItem from="1612056449831" duration="488000" />
+      <workItem from="1612108113769" duration="2963000" />
     </task>
     <servers />
   </component>
