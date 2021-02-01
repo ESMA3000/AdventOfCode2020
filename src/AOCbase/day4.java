@@ -105,6 +105,7 @@ public class day4 extends AOCAssignmentBase{
     }
 
     boolean checkKeyValue(String key){
+        String[] eyeColour = {"amb", "blu", "brn", "gry", "grn", "hzl", "oth"};
         String[] keySplit;
         keySplit = key.split(":");
         boolean isValid = false;
@@ -131,11 +132,13 @@ public class day4 extends AOCAssignmentBase{
                 valueSplit = keySplit[1].toCharArray();
                 for(char c: valueSplit){
                     if (c == 'i'){
-                        if (Integer.parseInt(keySplit[1]) >= 59 && Integer.parseInt(keySplit[1]) <= 76)
+                        if (Integer.parseInt(keySplit[1].split("i")[0]) >= 59
+                                && Integer.parseInt(keySplit[1].split("i")[0]) <= 76)
                             isValid = true;
                     }
                     else if (c == 'c'){
-                        if (Integer.parseInt(keySplit[1]) >= 150 && Integer.parseInt(keySplit[1]) <= 193)
+                        if (Integer.parseInt(keySplit[1].split("c")[0]) >= 150
+                                && Integer.parseInt(keySplit[1].split("c")[0]) <= 193)
                             isValid = true;
                     }
                 }
@@ -161,9 +164,11 @@ public class day4 extends AOCAssignmentBase{
                     isValid = true;
                 break;
             case "ecl":
-                ArrayList<String> eyeColour = new ArrayList<>(Arrays.asList("amb", "blu", "brn", "gry", "grn", "hzl", "oth"));
-                if(eyeColour.contains(keySplit[1]))
-                    isValid = true;
+                for(String color: eyeColour)
+                    if (color.equals(keySplit[1])) {
+                        isValid = true;
+                        break;
+                    }
                 break;
             case "pid":
                 valueSplit = keySplit[1].toCharArray();
