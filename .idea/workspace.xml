@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8e7c853-d4fa-4dfb-bdfd-3997ce7c76cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Input/day5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Input/day6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Input/day7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AOCbase/day5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AOCbase/day6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AOCbase/day7.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input/day1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Input/day1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input/day2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Input/day2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input/day3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input/day4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Input/day4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AOCbase/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AOCbase/day1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AOCbase/day2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AOCbase/day3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AOCbase/day4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AOCbase/day7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day7.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +153,16 @@
       <workItem from="1613675114729" duration="1713000" />
       <workItem from="1613770331012" duration="117000" />
       <workItem from="1613845393862" duration="3962000" />
+      <workItem from="1614288887964" duration="639000" />
     </task>
+    <task id="LOCAL-00001" summary="Upload AoC to Github">
+      <created>1614289045697</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614289045697</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +182,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Upload AoC to Github" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload AoC to Github" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -206,11 +196,6 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="5" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AOCbase/day7.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
