@@ -1,189 +1,133 @@
 package AOCbase;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class day4 extends AOCAssignmentBase{
-    public day4(String day) throws IOException {
+
+    public day4(String day) throws IOException, IOException {
         super(day);
     }
 
     @Override
     void solve() {
-        int ans = 0;
-        String[] validPassportKeys = new String[]{"byr","iyr","eyr","hgt","hcl","ecl","pid"};
-        ArrayList<String> currentPassportKeys = new ArrayList<>();
 
-        for(int i = 0; i < lines.size(); i++){
-            if (lines.get(i).isBlank()){
-                boolean validPassword = true;
-                for (String key: validPassportKeys){
-                    if (!currentPassportKeys.contains(key)){
-                        validPassword = false;
-                        break;
+        ArrayList<String> ValidPassportList = new ArrayList<>();
+        ArrayList<String> PassportList = SortToOneString(lines);
+        System.out.format("Passport in the system: %d%n", PassportList.size());
+
+        for (String Passport : PassportList) {
+
+            Boolean[] Check = {true, false, false, false, false, false, false, false};
+            String[] Validation = Passport.split(" ");
+
+            for (String ObjectString : Validation) {
+
+                if (ObjectString.contains("byr")) {
+
+                    String[] temp = ObjectString.split(":");
+
+                    if (Integer.parseInt(temp[1]) >= 1920 && Integer.parseInt(temp[1]) <= 2002 && temp[1].length() == 4) {
+                        Check[4] = true;
                     }
                 }
-                if (validPassword){
-                    ans++;
-                }
-                currentPassportKeys.clear();
-            }
-            else if (lines.get(i).equals(lines.get(lines.size() - 1)) && !lines.get(i).isBlank()){
-                String[] lineKeys = lines.get(i).split(" ");
-                for(String part: lineKeys){
-                    currentPassportKeys.add(part.split(":")[0]);
-                }
-                boolean validPassword = true;
-                for (String key: validPassportKeys){
-                    if (!currentPassportKeys.contains(key)){
-                        validPassword = false;
-                        break;
+                if (ObjectString.contains("iyr")) {
+
+                    String[] temp = ObjectString.split(":");
+
+                    if (Integer.parseInt(temp[1]) >= 2010 && Integer.parseInt(temp[1]) <= 2020 && temp[1].length() == 4) {
+                        Check[2] = true;
                     }
                 }
-                if (validPassword){
-                    ans++;
+                if (ObjectString.contains("eyr")) {
+
+                    String[] temp = ObjectString.split(":");
+
+                    if (Integer.parseInt(temp[1]) >= 2020 && Integer.parseInt(temp[1]) <= 2030 && temp[1].length() == 4) {
+                        Check[3] = true;
+                    }
                 }
-                currentPassportKeys.clear();
+                if (ObjectString.contains("hgt")) {
+
+                    String[] temp = ObjectString.split(":");
+
+                    if (temp[1].contains("cm")) {
+                        String[] CM = temp[1].split("cm");
+                        if (Integer.parseInt(CM[0]) >= 150 && Integer.parseInt(CM[0]) <= 193) {
+                            Check[5] = true;
+                        }
+                    }
+
+                    else if (temp[1].contains("in")) {
+                        String[] In = temp[1].split("in");
+                        if (Integer.parseInt(In[0]) >= 59 && Integer.parseInt(In[0]) <= 76) {
+                            Check[5] = true;
+                        }
+                    }
+                }
+                if (ObjectString.contains("hcl") && ObjectString.contains("#")) {
+
+                    String[] temp = ObjectString.split("#");
+                    if (temp[1].matches("[0-9a-f]{6}")) {
+                        Check[6] = true;
+                    }
+                }
+                if (ObjectString.contains("ecl")) {
+
+                    String[] HairColors = {"amb", "blu", "brn", "gry", "grn", "hzl", "oth"};
+                    String[] temp = ObjectString.split(":");
+
+                    for (String Color : HairColors) {
+
+                        if (temp[1].equals(Color)) {
+
+                            Check[7] = true;
+                            break;
+                        }
+                    }
+                }
+                if (ObjectString.contains("pid")) {
+
+                    String[] PID = ObjectString.split(":");
+                    if (PID[1].matches("[0-9]{9}")) {
+
+                        Check[1] = true;
+                    }
+                }
+                if (ObjectString.contains("cid")) {
+                    Check[0] = true;
+                }
+
             }
-            else{
-                String[] lineKeys = lines.get(i).split(" ");
-                for(String part: lineKeys){
-                    currentPassportKeys.add(part.split(":")[0]);
-                }
+
+            if (Arrays.stream(Check).allMatch(Boolean.TRUE::equals)) {
+
+                ValidPassportList.add(Passport);
             }
         }
-        System.out.println(ans);
-        solve2();
+        /*for(int i = 0; i < ValidPassportList.size(); i++){
+            System.out.println(ValidPassportList.get(i));
+        }*/
+        System.out.format("Valid Passports: %d%n", ValidPassportList.size());
     }
 
-    void solve2(){
-        int ans = 0;
-        String[] validPassportKeys = new String[]{"byr","iyr","eyr","hgt","hcl","ecl","pid"};
-        ArrayList<String> currentPassportKeys = new ArrayList<>();
+    ArrayList<String> SortToOneString (ArrayList<String> PassportList) {
 
-        for(int i = 0; i < lines.size(); i++){
-            if (lines.get(i).isBlank()){
-                boolean validPassword = true;
-                for (String key: validPassportKeys){
-                    if (!currentPassportKeys.contains(key)){
-                        validPassword = false;
-                        break;
-                    }
-                }
-                if (validPassword){
-                    ans++;
-                }
-                currentPassportKeys.clear();
-            }
-            else if (lines.get(i).equals(lines.get(lines.size() - 1)) && !lines.get(i).isBlank()){
-                String[] lineKeys = lines.get(i).split(" ");
-                for(String part: lineKeys){
-                    currentPassportKeys.add(part.split(":")[0]);
-                }
-                boolean validPassword = true;
-                for (String key: validPassportKeys){
-                    if (!currentPassportKeys.contains(key)){
-                        validPassword = false;
-                        break;
-                    }
-                }
-                if (validPassword){
-                    ans++;
-                }
-                currentPassportKeys.clear();
-            }
-            else{
-                String[] lineKeys = lines.get(i).split(" ");
-                for(String part: lineKeys){
-                    if (checkKeyValue(part)){
-                        currentPassportKeys.add(part.split(":")[0]);
-                    }
-                }
+        ArrayList<String> PassportsSorted = new ArrayList<>();
+        StringBuilder temp = new StringBuilder();
+
+        for (String Passport : PassportList) {
+
+            temp.append(Passport);
+            temp.append(" ");
+
+            if (Passport.equals("")) {
+
+                PassportsSorted.add(temp.toString());
+                temp.setLength(0);
             }
         }
-        System.out.println(ans);
-    }
-
-    boolean checkKeyValue(String key){
-        String[] eyeColour = {"amb", "blu", "brn", "gry", "grn", "hzl", "oth"};
-        String[] keySplit;
-        keySplit = key.split(":");
-        boolean isValid = false;
-        boolean check = false;
-        char[] valueSplit;
-
-        switch (keySplit[0]){
-            case "byr":
-                if ((Integer.parseInt(keySplit[1]) >= 1920 || Integer.parseInt(keySplit[1]) <= 2002)
-                        && keySplit.length == 4)
-                    isValid = true;
-                break;
-            case "iyr":
-                if ((Integer.parseInt(keySplit[1]) >= 2010 || Integer.parseInt(keySplit[1]) <= 2020)
-                        && keySplit.length == 4)
-                    isValid = true;
-                break;
-            case "eyr":
-                if ((Integer.parseInt(keySplit[1]) >= 2020 || Integer.parseInt(keySplit[1]) <= 2030)
-                        && keySplit.length == 4)
-                    isValid = true;
-                break;
-            case "hgt":
-                valueSplit = keySplit[1].toCharArray();
-                for(char c: valueSplit){
-                    if (c == 'i'){
-                        if (Integer.parseInt(keySplit[1].split("i")[0]) >= 59
-                                && Integer.parseInt(keySplit[1].split("i")[0]) <= 76)
-                            isValid = true;
-                    }
-                    else if (c == 'c'){
-                        if (Integer.parseInt(keySplit[1].split("c")[0]) >= 150
-                                && Integer.parseInt(keySplit[1].split("c")[0]) <= 193)
-                            isValid = true;
-                    }
-                }
-                /*if (valueSplit[valueSplit.length - 1] == 'i'){
-                    if (Integer.parseInt(keySplit[1]) >= 59 && Integer.parseInt(keySplit[1]) <= 76)
-                        isValid = true;
-                else if (valueSplit[valueSplit.length - 1] == 'c'){
-                    if (Integer.parseInt(keySplit[1]) >= 150 && Integer.parseInt(keySplit[1]) <= 193)
-                        isValid = true;
-                    }*/
-                break;
-            case "hcl":
-                valueSplit = keySplit[1].toCharArray();
-                for (char c : valueSplit) {
-                    if ((Character.isLetterOrDigit(c) || c == '#') && keySplit.length == 6) {
-                        check = true;
-                    } else {
-                        check = false;
-                        break;
-                    }
-                }
-                if (check)
-                    isValid = true;
-                break;
-            case "ecl":
-                for(String color: eyeColour)
-                    if (color.equals(keySplit[1])) {
-                        isValid = true;
-                        break;
-                    }
-                break;
-            case "pid":
-                valueSplit = keySplit[1].toCharArray();
-                for (char c : valueSplit) {
-                    if (Character.isDigit(c) && keySplit.length == 9) {
-                        check = true;
-                    } else {
-                        check = false;
-                        break;
-                    }
-                }
-                if (check)
-                    isValid = true;
-                break;
-        }
-        return isValid;
+        return PassportsSorted;
     }
 }

@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8e7c853-d4fa-4dfb-bdfd-3997ce7c76cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Input/day5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Input/day6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Input/day7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AOCbase/day5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AOCbase/day6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AOCbase/day7.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input/day1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Input/day1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input/day2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Input/day2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input/day3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input/day4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Input/day4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2020/AOCbase/day4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AOCbase/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AOCbase/day1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AOCbase/day2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AOCbase/day3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AOCbase/day4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AOCbase/day4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,9 +105,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -128,6 +150,30 @@
       <workItem from="1612173687203" duration="8157000" />
       <workItem from="1612203876007" duration="2573000" />
       <workItem from="1612206725887" duration="1236000" />
+      <workItem from="1612354286817" duration="75000" />
+      <workItem from="1612354525820" duration="940000" />
+      <workItem from="1612372390139" duration="7974000" />
+      <workItem from="1612431747100" duration="601000" />
+      <workItem from="1612470072566" duration="6009000" />
+      <workItem from="1612514429940" duration="6240000" />
+      <workItem from="1612555962439" duration="8734000" />
+      <workItem from="1612602160136" duration="6807000" />
+      <workItem from="1612633622419" duration="5978000" />
+      <workItem from="1612683877278" duration="14304000" />
+      <workItem from="1612728674660" duration="3671000" />
+      <workItem from="1612870373408" duration="316000" />
+      <workItem from="1612976111972" duration="3640000" />
+      <workItem from="1613072071328" duration="6543000" />
+      <workItem from="1613146573623" duration="1869000" />
+      <workItem from="1613230246710" duration="6701000" />
+      <workItem from="1613244552311" duration="4353000" />
+      <workItem from="1613311682303" duration="689000" />
+      <workItem from="1613420545639" duration="5787000" />
+      <workItem from="1613490646770" duration="8651000" />
+      <workItem from="1613649107929" duration="1203000" />
+      <workItem from="1613675114729" duration="1713000" />
+      <workItem from="1613770331012" duration="117000" />
+      <workItem from="1613845393862" duration="3962000" />
     </task>
     <servers />
   </component>
@@ -148,5 +194,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AOCbase/day7.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

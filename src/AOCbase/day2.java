@@ -1,67 +1,75 @@
 package AOCbase;
 
+import org.w3c.dom.css.Counter;
+
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class day2 extends AOCAssignmentBase{
+
     public day2(String day) throws IOException {
         super(day);
     }
 
     @Override
     void solve() {
-        String[] splittedline;
-        String[] minMax;
-        char charLookUp;
-        int min = 0,max = 0,check = 0,ans = 0;
-        for (String line: lines) {
-           splittedline = line.split(" ");
-           minMax = splittedline[0].split("-");
-           charLookUp = splittedline[1].charAt(0);
-           min = Integer.parseInt(minMax[0]);
-           max = Integer.parseInt(minMax[1]);
 
-           for (char letter: splittedline[2].toCharArray()){
-               if (letter == charLookUp){
-                   check++;
-               }
-           }
-           if (check >=min && check <=max){
-               ans++;
-           }
-           check = 0;
-        }
-        System.out.println(ans);
-        solve2();
-    }
+        ArrayList<String> PasswordList = lines;
+        ArrayList<String> ValidPasswordsOld = new ArrayList<>();
+        ArrayList<String> ValidPasswordsNew = new ArrayList<>();
+        String[] Scan;
 
-    void solve2(){
-        String[] splittedline;
-        String[] Index;
-        char[] codeSplitted;
-        char charLookUp;
-        int firstIndex = 0,lastIndex = 0,check = 0,ans = 0;
-        for (String line: lines) {
-            splittedline = line.split(" ");
-            Index = splittedline[0].split("-");
-            charLookUp = splittedline[1].charAt(0);
-            firstIndex = Integer.parseInt(Index[0]);
-            lastIndex = Integer.parseInt(Index[1]);
-            codeSplitted = splittedline[2].toCharArray();
+        for(String Password : PasswordList){
 
-            for (int i = 0; i < codeSplitted.length; i++){
-                if (firstIndex == i + 1 && charLookUp == codeSplitted[i]){
-                    check++;
+            int Counter = 0;
+            int Index = 0;
+            boolean ExistOnFirstIndex = false;
+            boolean ExistOnSecondIndex = false;
+
+            Scan = Password.split("[- :]");
+            //Scan[0] = Min Number
+            //Scan[1] = Max Number
+            //Scan[2] = Letter
+            //Scan[3] = Empty
+            //Scan[4] = Password
+
+            if(Scan[4].contains(Scan[2])){
+
+                for(char Seq : Scan[4].toCharArray()){
+
+                    char temp = Scan[2].charAt(0);
+                    Index++;
+
+                    if(temp == Seq){
+
+                        Counter++;
+
+                        if(Index == Integer.parseInt(Scan[0])){
+                            ExistOnFirstIndex = true;
+                        }
+                        if(Index == Integer.parseInt(Scan[1])){
+                            ExistOnSecondIndex = true;
+                        }
+
+                    }
                 }
-                else if (lastIndex == i + 1 && charLookUp == codeSplitted[i]){
-                    check++;
+
+                if (ExistOnFirstIndex ^ ExistOnSecondIndex){
+
+                    ValidPasswordsNew.add(Scan[0] + "-" + Scan[1] + " " + Scan[2] + ":" + " " + Scan[4]);
+                    //System.out.println(ValidPasswordsNew.get(ValidPasswordsNew.size()-1));
+                }
+
+                if(Counter >= Integer.parseInt(Scan[0]) && Counter <= Integer.parseInt(Scan[1])){
+
+                    ValidPasswordsOld.add(Scan[0] + "-" + Scan[1] + " " + Scan[2] + ":" + " " + Scan[4]);
+                    //System.out.println(ValidPasswordsOld.get(ValidPasswordsOld.size()-1));
                 }
             }
-            if (check == 1)
-                ans++;
-
-
-            check = 0;
         }
-        System.out.println(ans);
+        System.out.format("Total Passwords in the system: %d%n", PasswordList.size());
+        System.out.format("Valid Passwords in the old system: %d%n", ValidPasswordsOld.size());
+        System.out.format("Valid Passwords in the new system: %d%n", ValidPasswordsNew.size());
     }
 }
